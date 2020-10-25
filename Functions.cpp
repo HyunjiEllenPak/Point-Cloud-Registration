@@ -341,7 +341,7 @@ ICP_OUT icp_registration(PC_XYZ::Ptr src, PC_XYZ::Ptr dst,PC_XYZ::Ptr tf_src, in
 		totalT=T*totalT;
 		for (int n2=0; n2 < src_num; n2++) {
 			Eigen::Vector4f temp((*tf_src)[n2].x, (*tf_src)[n2].y, (*tf_src)[n2].z,1);
-			temp=T*temp.eval();//의심스러움			
+			temp=T*temp.eval();		
 			(*tf_src)[n2].x=temp(0);
 			(*tf_src)[n2].y=temp(1);
 			(*tf_src)[n2].z=temp(2);
